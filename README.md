@@ -67,3 +67,9 @@ Over the past few months, there have been widespread protests in India in regard
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%206/bots1.png)
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%206/bots2.png)
+
+I decided to try and visualise. So I made wordclouds centred around the two main hashtags trending at the time, #IndiaAgainstPropaganda and #GretaThunbergExposed.
+
+![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%206/IAP_wordcloud.png)
+
+![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%206/GTE_wordcloud.png)

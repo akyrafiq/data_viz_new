@@ -73,3 +73,28 @@ I decided to try and visualise. So I made wordclouds centred around the two main
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%206/IAP_wordcloud.png)
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%206/GTE_wordcloud.png)
+
+
+## Break and update
+
+So it has been a couple of months since my last update to this post. I have just been very busy with a few projects I have been working on and have also been in the process of moving jobs. I had an issue with this repository where I had accidentally uploaded some personal information. After trying and filing to remove it from my Github history, I just ended up deleting the whole repo and just reuploading it (Hence why this is now caled Data Viz New). However, even though I have been off, There have been a few things I have worked upon that I can share here and will tid up at a later date.
+
+## Visualisation 7: Cricket DRS system
+
+The DRS system has been around in cricket for just over a decade now but it hasn't stopped many fans of the game bemoaning ertain umpires as being terrible. Thus, I did a short exploratory analysis on which umpires are making the biggest errors that need overturning.'
+
+![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%207/umpires.png)
+
+## Visualisation 8: New York Electric Car Rebates
+
+I took part in a fun little event called DataSci Live. IT is experimenting whether we can make Data Science an 'eSport'. I was given a challenge to complete within 90 minutes. The question was regarding the Electric Car Rebate Scheme in New York. We had to find out who exactly was gaining rebates (What % were white, earning over $100k, male). These are the visualisations I came up within the time but would be worth a revisit.'
+
+![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%208/Rebates%20by%20County.png)
+
+![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%208/Wealthiest%20counties.png)
+
+![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%208/Wealthiest%20counties%20by%20race.png)
+
+## Visualisation 9: Random Macroeconomics
+
+This was a short tutorial I had looking at some macroeconomic data in R

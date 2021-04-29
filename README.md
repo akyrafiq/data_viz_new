@@ -1,6 +1,17 @@
 # Data Visualisations
 As a challenge for 2021, I am going to try and do some data vis work everyday. I shall keep of it all in this repo and eventually branch it out into separate repos. I will have  brief summary of what I have done here and update it time to time.
 
+-[Visualisation 1: New Coronavirus Variant](#Visualisation-1:-New-Coronavirus-Variant)
+-[Visualisation 2: Football League Tables](#Visualisation 2: Football League Tables)
+-[Visualisation 3: Cricket](#Visualisation 3: Cricket)
+-[Visualisation 4: Portugese Wildfires](#Visualisation 4: Portugese Wildfires)
+-[Visualisation 5: Capitol Hill Riots Tweets](#Visualisation 5: Capitol Hill Riots Tweets)
+-[Visualisation 6: India Farmers protests Media Astroturfing](#Visualisation 6: India Farmers protests Media Astroturfing)
+-[Break and update](#Break and update)
+-[Visualisation 7: Cricket DRS system](#Visualisation 7: Cricket DRS system)
+-[Visualisation 8: New York Electric Car Rebates](#Visualisation 8: New York Electric Car Rebates)
+-[Visualisation 9: Random Macroeconomics](#Visualisation 9: Random Macroeconomics)
+
 ## Visualisation 1: New Coronavirus Variant
 
 At the end of 2020, a new variant of the coronavirus was found in the UK. Initial findings found it to be more contagious than the original variant but less deadly. Whilst this might make it seem it cancels out, due to how exponential growth works, the new variant can prove to be even more deadlier. I tried to demonstrate this with a few plots. I have assumed the current R_0 of the virus is 1.1 and it has a fatality rate of 0.1%. Then with the new variant, I assume it has an R_0 70% greater than the original strain but is only five times less deadly.

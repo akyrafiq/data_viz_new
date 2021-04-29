@@ -1,16 +1,16 @@
 # Data Visualisations
 As a challenge for 2021, I am going to try and do some data vis work everyday. I shall keep of it all in this repo and eventually branch it out into separate repos. I will have  brief summary of what I have done here and update it time to time.
 
-- [Visualisation 1: New Coronavirus Variant](#Visualisation-1:-New-Coronavirus-Variant)
-- [Visualisation 2: Football League Tables](#Visualisation 2: Football League Tables)
-- [Visualisation 3: Cricket](#Visualisation 3: Cricket)
-- [Visualisation 4: Portugese Wildfires](#Visualisation 4: Portugese Wildfires)
-- [Visualisation 5: Capitol Hill Riots Tweets](#Visualisation 5: Capitol Hill Riots Tweets)
-- [Visualisation 6: India Farmers protests Media Astroturfing](#Visualisation 6: India Farmers protests Media Astroturfing)
-- [Break and update](#Break and update)
-- [Visualisation 7: Cricket DRS system](#Visualisation 7: Cricket DRS system)
-- [Visualisation 8: New York Electric Car Rebates](#Visualisation 8: New York Electric Car Rebates)
-- [Visualisation 9: Random Macroeconomics](#Visualisation 9: Random Macroeconomics)
+- [Visualisation 1: New Coronavirus Variant](#visualisation-1:-new-coronavirus-variant)
+- [Visualisation 2: Football League Tables](#visualisation-2:-football-league-tables)
+- [Visualisation 3: Cricket](#visualisation-3:-cricket)
+- [Visualisation 4: Portugese Wildfires](#visualisation-4:-portugese-wildfires)
+- [Visualisation 5: Capitol Hill Riots Tweets](#visualisation-5:-capitol-hill-riots-tweets)
+- [Visualisation 6: India Farmers protests Media Astroturfing](#visualisation-6:-india-farmers-protests-media-astroturfing)
+- [Break and update](#break-and-update)
+- [Visualisation 7: Cricket DRS system](#visualisation-7:-cricket-drs-system)
+- [Visualisation 8: New York Electric Car Rebates](#visualisation-8:-new-york-electric-car-rebates)
+- [Visualisation 9: Random Macroeconomics](#visualisation-9:-random-macroeconomics)
 
 ## Visualisation 1: New Coronavirus Variant
 

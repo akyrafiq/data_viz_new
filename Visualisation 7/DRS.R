@@ -12,7 +12,8 @@ reviews<-read.csv("drs_tests.csv")
 
 ump<-reviews %>% count(Umpire,Result) 
 
-ggplot(ump,aes(x=Umpire,y=n,fill=Result))+geom_col()
+ggplot(ump,aes(x=Umpire,y=n,fill=Result))+geom_col()+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
 ggsave("umpires.png")
 

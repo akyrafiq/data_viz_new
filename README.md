@@ -92,13 +92,15 @@ So it has been a couple of months since my last update to this post. I have just
 
 ## Visualisation 7: Cricket DRS system
 
-The DRS system has been around in cricket for just over a decade now but it hasn't stopped many fans of the game bemoaning ertain umpires as being terrible. Thus, I did a short exploratory analysis on which umpires are making the biggest errors that need overturning.'
+The DRS system has been around in cricket for just over a decade now but it hasn't stopped many fans of the game bemoaning ertain umpires as being terrible. Thus, I did a short exploratory analysis on which umpires are making the biggest errors that need overturning. I also investigated which batsmen review the most and when exactly are reviews taken over the course of an innings.
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%207/umpires.png)
+![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%207/bat_for.png)
+![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%207/overs.png)
 
 ## Visualisation 8: New York Electric Car Rebates
 
-I took part in a fun little event called DataSci Live. IT is experimenting whether we can make Data Science an 'eSport'. I was given a challenge to complete within 90 minutes. The question was regarding the Electric Car Rebate Scheme in New York. We had to find out who exactly was gaining rebates (What % were white, earning over $100k, male). These are the visualisations I came up within the time but would be worth a revisit.'
+I took part in a fun little event called DataSci Live. It is experimenting whether we can make Data Science an 'eSport'. I was given a challenge to complete within 90 minutes. The question was regarding the Electric Car Rebate Scheme in New York. We had to find out who exactly was gaining rebates (What % were white, earning over $100k, male). These are the visualisations I came up within the time but would be worth a revisit. I will post a link to the recording once it is up on YouTube.
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%208/Rebates%20by%20County.png)
 

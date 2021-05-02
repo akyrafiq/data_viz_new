@@ -8,8 +8,8 @@ library(fitdistrplus)
 setwd("~/Documents/GitHub/data_viz/Visualisation 3")
 
 #read data
-ipl<-read.csv("data/matchesv2.csv")
-ipl_del<-read.csv("data/deliveries.csv")
+ipl<-read.csv("ipl/data/matchesv2.csv")
+ipl_del<-read.csv("ipl/data/deliveries.csv")
 
 #replace rising pune supergiants
 ipl[ipl$winner=="Rising Pune Supergiants",]$winner<-"Rising Pune Supergiant"
@@ -34,7 +34,7 @@ ggplot(ipl %>% filter(win_by_runs != 0), aes(x=win_by_runs)) +
   theme(legend.position="bottom",
         legend.title = element_blank())
 
-ggsave("hist/win_by_runs_hist.png")
+ggsave("ipl/hist/win_by_runs_hist.png")
 
 ggplot(ipl %>% filter(win_by_wickets != 0), aes(x=win_by_wickets)) + 
   geom_histogram(aes(fill=winner), 
@@ -51,7 +51,7 @@ ggplot(ipl %>% filter(win_by_wickets != 0), aes(x=win_by_wickets)) +
   theme(legend.position="bottom",
         legend.title = element_blank())
 
-ggsave("hist/win_by_wickets_hist.png")
+ggsave("ipl/hist/win_by_wickets_hist.png")
 
 #calculate distribution
 dis_ipl<-data.frame(x=0:1500/10,
@@ -75,7 +75,7 @@ ggplot(dis_ipl %>% filter(variable=="Runs"),aes(x=x,y=value))+
   theme(legend.position="bottom",
         legend.title = element_blank())
 
-ggsave("dist/win_by_runs_dist.png")
+ggsave("ipl/dist/win_by_runs_dist.png")
 ggplot(dis_ipl %>% filter(variable=="Wickets",x<10.1),aes(x=x,y=value))+
   geom_line()+
   xlab("Margin of Victory")+
@@ -86,7 +86,7 @@ ggplot(dis_ipl %>% filter(variable=="Wickets",x<10.1),aes(x=x,y=value))+
   scale_fill_manual(values = sc,guide = guide_legend())+
   theme(legend.position="bottom",
         legend.title = element_blank())
-ggsave("dist/win_by_wickets_dist.png")
+ggsave("ipl/dist/win_by_wickets_dist.png")
 
 ipl_del %>% dplyr ::select(batsman,batting_team,bowling_team,batsman_runs) %>% group_by(batsman,batting_team,bowling_team) %>% dplyr::summarise_each(funs(sum),batsman_runs) %>% ungroup %>% top_n(50) %>% as.data.frame() %>% ggplot(aes(x=batsman,y=bowling_team))+geom_point(aes(size=batsman_runs,color=batting_team))+
   theme(legend.position="bottom",
@@ -126,7 +126,7 @@ ggplot(pld %>% filter(Played>30),
   geom_text(vjust=-.5,
             position = position_dodge(width = .9))
 
-ggsave("toss luck.png")
+ggsave("ipl/toss luck.png")
 
 ggplot(pld ,#%>% filter(Played>30),
        aes(x=reorder(Team,-win_rate),
@@ -148,7 +148,7 @@ ggplot(pld ,#%>% filter(Played>30),
   geom_text(vjust=-.5,
             position = position_dodge(width = .9))
 
-ggsave("success.png")
+ggsave("ipl/success.png")
 
 ipl %>% count(city) %>% ggplot(
   aes(x=reorder(city,-n),
@@ -163,7 +163,7 @@ ipl %>% count(city) %>% ggplot(
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
         panel.background = element_blank())
-ggsave("venues.png")
+ggsave("ipl/venues.png")
 
 #delievery stats
 
@@ -190,7 +190,7 @@ ggplot(balls %>% filter(boundaries !=0, boundaries>20) %>% top_n(25,-ballsperbou
   labs(title="Biggest IPL Boundary Hitter",
        subtitle="Minimum 20 boundaries hit")+
   xlab("Batsman")+ylab("Balls per Boundary")
-ggsave("boundaries.png")
+ggsave("ipl/boundaries.png")
 
 ggplot(balls %>% filter(sixes !=0, sixes>20) %>% top_n(25,-ballspersix),
        aes(x=reorder(batsman,ballspersix),y=ballspersix,fill=batsman))+geom_col()+
@@ -203,7 +203,7 @@ ggplot(balls %>% filter(sixes !=0, sixes>20) %>% top_n(25,-ballspersix),
   labs(title="Biggest IPL Six Hitter",
        subtitle="Minimum 20 sixes hit")+
   xlab("Batsman")+ylab("Balls per six")
-ggsave("sixes.png")
+ggsave("ipl/sixes.png")
 
 ggplot(balls %>% filter(fours !=0, fours>20) %>% top_n(25,-ballsperfour),
        aes(x=reorder(batsman,ballsperfour),y=ballsperfour,fill=batsman))+geom_col()+
@@ -216,7 +216,7 @@ ggplot(balls %>% filter(fours !=0, fours>20) %>% top_n(25,-ballsperfour),
   labs(title="Biggest IPL Four Hitter",
        subtitle="Minimum 20 fours hit")+
   xlab("Batsman")+ylab("Balls per four")
-ggsave("fours.png")
+ggsave("ipl/fours.png")
 
 
 #create noball and wide bll collumn dummies
@@ -236,7 +236,7 @@ ggplot(ipl_del %>% filter(wide==1) %>% count(del),
   labs(title="IPL Wides",
        subtitle="Wide Balls are more frequently bowled at the backend of the innings")+
   xlab("Delivery")+ylab("No. of Wides")
-ggsave("wide_del.png")
+ggsave("ipl/wide_del.png")
 
 ggplot(ipl_del %>% filter(wide==1) %>% count(over,bowling_team),
        aes(x=over,y=n))+geom_col(aes(fill=bowling_team))+
@@ -247,9 +247,9 @@ ggplot(ipl_del %>% filter(wide==1) %>% count(over,bowling_team),
         panel.background = element_blank(),
         legend.title = element_blank())+
   labs(title="IPL Wides",
-       subtitle="Wide Balls are more frequently bowled at the backend of the innings")+
+       subtitle="Wide Balls are more frequently bowled at the begining of the innings")+
   xlab("Over")+ylab("No. of Wides")
-ggsave("wide_over.png")
+ggsave("ipl/wide_over.png")
 
 ggplot(ipl_del %>% filter(noball==1) %>% count(del),
        aes(x=del,y=n))+geom_col(aes(fill="blue"))+
@@ -261,7 +261,7 @@ ggplot(ipl_del %>% filter(noball==1) %>% count(del),
   labs(title="IPL No Balls",
        subtitle="No Balls are more frequently bowled at the backend of the innings")+
   xlab("Delivery")+ylab("No. of No Balls")
-ggsave("nb_del.png")
+ggsave("ipl/nb_del.png")
 
 ggplot(ipl_del %>% filter(noball==1) %>% count(over,bowling_team),
        aes(x=over,y=n))+geom_col(aes(fill=bowling_team))+
@@ -274,4 +274,4 @@ ggplot(ipl_del %>% filter(noball==1) %>% count(over,bowling_team),
   labs(title="IPL No Balls",
        subtitle="No Balls are more frequently bowled at the backend of the innings")+
   xlab("Over")+ylab("No. of No Balls")
-ggsave("nb_over.png")
+ggsave("ipl/nb_over.png")

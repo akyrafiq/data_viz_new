@@ -59,16 +59,19 @@ pubcons_old_it_de <- rdb("Eurostat","gov_10a_main",mask = "A.MIO_EUR.S13.P3.IT+D
                      add_column(var="pubcons_old")
 
 df_nsa_q <- pubcons_recent_it_de_es_nsa %>%
-            select(period,country=geo, value)
+            dplyr::select(period,geo, value) %>% 
+            rename(country=geo)
 
 to_deseason <- df_nsa_q %>%
                spread(country, value)
 
-deseasoned_q <-  bind_rows(lapply(unique(df_nsa_q$country), 
-                           function(var)deseason(var_arrange = var,
+require(seasonal)
+library(remote)
+deseasoned_q<- bind_rows(lapply(unique(df_nsa_q$country), 
+                         function(var) deseason(var_arrange = var,
                                           source_df = to_deseason)))%>% 
-                 mutate(Origin = "Adjusted Series",country=var)%>%
-                 select(-var)
+               mutate(Origin = "Adjusted Series",country=var)%>%
+               select(-var)
 
 df_nsa_q %<>% mutate(Origin = "Unadjusted Series")
 

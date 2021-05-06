@@ -10,6 +10,12 @@ setwd("~/Documents/GitHub/data_viz_2021/Visualisation 7")
 #read in data
 reviews<-read.csv("drs_tests.csv")
 
+library(lubridate)
+reviews$StartDate<-ymd(reviews$StartDate)
+reviews$Year<-year(reviews$StartDate)
+reviews$Match<-paste0(reviews$Team1," vs ",reviews$Team2,", ",
+                      reviews$Ground," ",reviews$Year)
+
 #Visualise impire success rate
 reviews[reviews$Umpire=="RA Kattleborough ",]$Umpire<-"RA Kettleborough"
 ump<-reviews %>%
@@ -53,7 +59,7 @@ ggplot(team,aes(x=Team,y=Prop*100,fill=Result,label=paste0(round(Prop*100,0),"%"
   geom_col()+
   geom_text(size = 3, position = position_stack(vjust = 0.5))+
   theme_fivethirtyeight()+
-  ylim(0,100)+
+  ylim(0,105)+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
   xlab("Umpire")+
   ylab("Probability")+
@@ -123,3 +129,59 @@ ggplot(over,aes(x=Over2, fill=Result))+
        subtitle="Number of reviews taken in each 10 over interval")
 
 ggsave("overs.png")
+
+#Which matches had the most reviews?
+match<-reviews %>%
+       count(MatchID,Match,Result) %>% 
+       left_join(reviews %>% count(MatchID,Match) %>% rename(Reviews=n))
+
+ggplot(match %>% filter(Reviews>15),aes(x=reorder(Match,-Reviews),y=n,fill=Result,label=n))+
+  geom_bar(stat = "identity")+
+  geom_text(size = 3, position = position_stack(vjust = 0.5))+
+  theme_fivethirtyeight()+
+  ylim(0,30)+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  xlab("Umpire")+
+  ylab("Probability")+
+  # geom_text(data=reviews %>% count(Match) %>% rename(Reviews=n) %>% filter(Reviews>15),
+  #           aes(y=Reviews,label=Reviews),size = 6, position = position_stack(vjust = 0.5))+
+  labs(title="Which matches had the most reviews?", 
+       subtitle="The number of reviews and their outcome in each match")
+
+ggsave("match.png")
+
+#how has it changed over time?
+year<-reviews %>%
+  count(Year,Result) %>% 
+  left_join(reviews %>% count(Year) %>% rename(Reviews=n)) %>% 
+  mutate(Prop=n/Reviews)
+
+ggplot(year,aes(x=as.factor(Year),y=n,fill=Result,label=n))+
+  geom_bar(stat = "identity")+
+  geom_text(size = 3, position = position_stack(vjust = 0.5))+
+  theme_fivethirtyeight()+
+  ylim(0,550)+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  xlab("Umpire")+
+  ylab("Probability")+
+  # geom_text(data=reviews %>% count(Match) %>% rename(Reviews=n) %>% filter(Reviews>15),
+  #           aes(y=Reviews,label=Reviews),size = 6, position = position_stack(vjust = 0.5))+
+  labs(title="Which year had the most reviews?", 
+       subtitle="The number of reviews and their outcome in each year")
+
+ggsave("year.png")
+
+ggplot(year,aes(x=as.factor(Year),y=Prop*100,fill=Result,label=paste0(round(Prop*100,0),"%")))+
+  geom_bar(stat = "identity")+
+  geom_text(size = 3, position = position_stack(vjust = 0.5))+
+  theme_fivethirtyeight()+
+  ylim(0,105)+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  xlab("Umpire")+
+  ylab("Probability")+
+  # geom_text(data=reviews %>% count(Match) %>% rename(Reviews=n) %>% filter(Reviews>15),
+  #           aes(y=Reviews,label=Reviews),size = 6, position = position_stack(vjust = 0.5))+
+  labs(title="Have teams got better at using their reviews over time??", 
+       subtitle="The results of reviews over the years")
+
+ggsave("year_prop.png")

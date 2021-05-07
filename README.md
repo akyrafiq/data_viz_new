@@ -11,6 +11,9 @@ As a challenge for 2021, I am going to try and do some data vis work everyday. I
 - [Visualisation 7: Cricket DRS system](#visualisation-7:-cricket-drs-system)
 - [Visualisation 8: New York Electric Car Rebates](#visualisation-8:-new-york-electric-car-rebates)
 - [Visualisation 9: Random Macroeconomics](#visualisation-9:-random-macroeconomics)
+- [Visualisation 10: Pakistani Cricket](#visualisation-9:-random-macroeconomics)
+- [Visualisation 11: UK Election Results](#visualisation-9:-random-macroeconomics)
+- [Visualisation 12: Dogecoin](#visualisation-9:-random-macroeconomics)
 
 ## Visualisation 1: New Coronavirus Variant
 
@@ -111,3 +114,9 @@ I took part in a fun little event called DataSci Live. It is experimenting wheth
 ## Visualisation 9: Random Macroeconomics
 
 This was a short tutorial I had looking at some macroeconomic data in R
+
+## Visualisation 12: Dogecoin
+
+Nothing fancy here, just showing how Dogeocin has skyrocketed this year.
+
+![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%2012/doge.png)

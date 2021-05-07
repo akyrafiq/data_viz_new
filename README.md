@@ -4,7 +4,7 @@ As a challenge for 2021, I am going to try and do some data vis work everyday. I
 - [Visualisation 1: New Coronavirus Variant](#visualisation-1:-new-coronavirus-variant)
 - [Visualisation 2: Football League Tables](#visualisation-2:-football-league-tables)
 - [Visualisation 3: Cricket](#visualisation-3:-cricket)
-- [Visualisation 4: Portugese Wildfires](#visualisation-4:-portugese-wildfires)
+- [Visualisation 4: Portuguese Wildfires](#visualisation-4:-portugese-wildfires)
 - [Visualisation 5: Capitol Hill Riots Tweets](#visualisation-5:-capitol-hill-riots-tweets)
 - [Visualisation 6: India Farmers protests Media Astroturfing](#visualisation-6:-india-farmers-protests-media-astroturfing)
 - [Break and update](#break-and-update)
@@ -23,7 +23,7 @@ At the end of 2020, a new variant of the coronavirus was found in the UK. Initia
 ![The rate of infections compared between the two variants but without log axes to demonstrate how big  the divergence between the two trends are.](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%201/infections_nonlog.png)
 ![The rate of death compared between the two variants.](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%201/deaths.png)
 
-The first two plots show how the rate of infection varies between the two variants. The first uses a log axis so that they are comparable but I also show it without the log axis to demonstrate how big the divergence between the two trends are. The third plot shows an estimate of roughly how many people are expected to die from the amount infected each day. Realistically there should be a lag added in to show when these dates actually occur, but again this was done purely for demonstration purposes.
+The first two plots show how the rate of infection varies between the two variants. The first uses a log axis so that they are comparable but I also show it without the log axes to demonstrate how big the divergence between the two trends are. The third plot shows an estimate of roughly how many people are expected to die from the amount infected each day. Realistically there should be a lag added in to show when these dates actually occur, but again this was done purely for demonstration purposes.
 (Updates 27/01: In a UK government press briefing, it was announced that the new variant in fact had an even higher fatality rate than the original virus... so the situation is even worse than first imagined)
 
 ## Visualisation 2: Football League Tables
@@ -46,12 +46,12 @@ Here I have compared how things in the league vary by league position
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%202/plot/bund/XvP.png)
 
-Will require a much more in depth writeup and trimming down of results (I currently have over 100 graphs and need to trim down which ones are of actual interest....).
+Will require a much more in depth write-up and trimming down of results (I currently have over 100 graphs and need to trim down which ones are of actual interest....).
 
 
 ## Visualisation 3: Cricket
 
-I am trying to work out the efficiency of the IPL Auction system. At the moment I only have ball by ball data. Just conducting some exploratory analysis on to find the stand out performers each season and then combine this with auction data. Ideally want to get it done before the meg auction later this year.
+I am trying to work out the efficiency of the IPL Auction system. It's a question I have thought about for a while, as with sports player markets in general (What determines a sport's players value? What kind of players are prone to overvaluation/undervaluation?'). At the moment I only have ball by ball data. Just conducting some exploratory analysis on to find the stand out performers each season and then combine this with auction data. Ideally want to get it done before the meg auction later this year.
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%203/ipl/plots/boundaries.png)
 
@@ -59,25 +59,25 @@ I also got interested in the career of Kusal Mendis- who started off his career 
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%203/cricinfo/kusal2.png)
 
-I then found another package, cricketR, which is especially built for cricket analysis which is capable of what I was doing before with prebuilt functions.
+I then found another package, cricketR, which is especially built for cricket analysis, which is capable of what I was doing before with prebuilt functions. I will use this at a later date looking more into certain players.
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%203/cricinfo/tendulkar_avg2.png)
 
-## Visualisation 4: Portugese Wildfires
+## Visualisation 4: Portuguese Wildfires
 
-Me having an attempt of replicating some coursework I did at university with a totally different dataset.
+Me having an attempt of replicating some coursework I did at university with a totally different dataset. The aim is to find a 'rare event distribution' for wildfires in a region. Here I have chosen the Weibull distribution again, but I’ll compare to a method using MLE at some point.
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%204/dist.png)
 
 ## Visualisation 5: Capitol Hill Riots Tweets
 
-I am analysing a dataset of tweets about the Capitol Hill riots that unfolded on January 6th. Firstly, I have made a map visualising where were these tweets sent from:
+I am analysing a dataset of tweets about the Capitol Hill riots that unfolded on January 6th. Firstly, I have made a map visualising where were these tweets sent:
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%205/heatmap.png)
- I plan to do some NLP work on this building on a framework I came up with two years ago.
- 
+I plan to do some NLP work on this building on a framework I learnt two years ago.
+
 ## Visualisation 6: India Farmers protests Media Astroturfing
 
-Over the past few months, there have been widespread protests in India in regards to new farming laws being introduced in India. Public figures like Greta Thunberg and Rihanna tweeted out about the issue which brought about a lot of online backlash. I had a quick look into a few trends to see how this is being carried out by bot activity.
+Over the past few months, there have been widespread protests in India in regards to new farming laws being introduced in India. Public figures like Greta Thunberg and Rihanna tweeted out about the issue, which brought about a lot of online backlash. I had a quick look into a few trends to see how this is being carried out by bot activity, often a tell tale sign being the number of digits in the username.
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%206/bots1.png)
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%206/bots2.png)
@@ -88,10 +88,11 @@ I decided to try and visualise. So I made wordclouds centred around the two main
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%206/GTE_wordcloud.png)
 
+A lot of it is the work of the notorious BJP IT Cells. I unfortunately have been threatened/harassed by them in the past. I want to do a more thorough look into their activity but given restrictions of the Twitter API, I can only mine data in small chunks.
 
 ## Break and update
 
-So it has been a couple of months since my last update to this post. I have just been very busy with a few projects I have been working on and have also been in the process of moving jobs. I had an issue with this repository where I had accidentally uploaded some personal information. After trying and filing to remove it from my Github history, I just ended up deleting the whole repo and just reuploading it (Hence why this is now caled Data Viz New). However, even though I have been off, There have been a few things I have worked upon that I can share here and will tid up at a later date.
+So it has been a couple of months since my last update to this post. I have just been very busy with a few projects I have been working on and have also been in the process of moving jobs. I had an issue with this repository where I had accidentally uploaded some personal information. After trying and filing to remove it from my Github history, I just ended up deleting the whole repo and just reuploading it (Hence why this is now called Data Viz New). However, even though I have been off, there have been a few things I have worked upon that I can share here and will tidy up at a later date.
 
 ## Visualisation 7: Cricket DRS system
 
@@ -117,6 +118,6 @@ This was a short tutorial I had looking at some macroeconomic data in R
 
 ## Visualisation 12: Dogecoin
 
-Nothing fancy here, just showing how Dogeocin has skyrocketed this year.
+Nothing fancy here, just showing how Dogecoin has skyrocketed this year.
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%2012/doge.png)

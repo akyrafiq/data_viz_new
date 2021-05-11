@@ -20,8 +20,9 @@ geom_line(linetype="dashed",aes(y=Low),colour="red1")+
 theme_wsj()+
 ylim(0,0.7)+
 theme(legend.position = "none")+
-labs(title="The Rise of Dogecoin in 2021")+
+labs(title="The Rise of Dogecoin in 2021",
+     subtitle = "Will the bubble burst or will Doge go to the moon?")+
   xlab("Date")+
   ylab("Dogecoin Value (in US$)")
 
-ggsave("")
+ggsave("doge.png")

@@ -9,17 +9,19 @@ setwd("~/Documents/GitHub/data_viz_2021/Visualisation 14")
 
 gbw<-read_csv("gbw.csv")
 gbw$Update<-lubridate::dmy(gbw$Update)
-gbw<-gbw %>% filter(Update==max(gbw$Update))
+gbw<-gbw %>% filter(Update==max(gbw$Update)) %>% 
+  mutate(tot_views=yt_views+fb_views+tot_list,
+         soc_con=round(tot_views/insta_imp,2))
 
 
-if (max(gbw$Update)==Sys.Date()){
-  print(paste0("We already have the Analytics output for today- open the files plots/",Sys.Date(),"_views.png and plots/",
-        Sys.Date(),"_instagram.png to view the results.",
-        "Please update tommorrow :)"))
-} else{
+# if (max(gbw$Update)==Sys.Date()){
+#   print(paste0("We already have the Analytics output for today- open the files plots/",Sys.Date(),"_views.png and plots/",
+#         Sys.Date(),"_instagram.png to view the results.",
+#         "Please update tommorrow :)"))
+# } else{
 gbw_views<-gbw %>%
            reshape2::melt(id="Episode") %>%
-           filter(variable %in% c("yt_views","fb_views"))
+           filter(variable %in% c("yt_views","fb_views","tot_list"))
 
 gbw_views<-gbw_views[complete.cases(gbw_views),]
 
@@ -28,7 +30,13 @@ geom_col()+
 geom_text(size = 3, position = position_stack(vjust = 0.5))+
 ylab("Total Views")+
 ggtitle(paste0("Going Beyond Wolverhampton Views as of ",format(Sys.Date(), "%d/%m/%Y")))+
-theme_tufte()
+theme_tufte()+
+  scale_fill_discrete(breaks = c("yt_views","fb_views","tot_list"),
+                     labels = c("Youtube Views",
+                                "Facebook Views",
+                                "Radio Listeners"))+
+  theme(legend.position="right",
+        legend.title = element_blank())
 
 ggsave(paste0("plots/",Sys.Date(),"_views.png"))
 
@@ -42,4 +50,5 @@ ylab("Instagram Impressions")+
   ggtitle(paste0("Going Beyond Wolverhampton Instagram Activity as of ",format(Sys.Date(), "%d/%m/%Y")))+
 theme(legend.position = "none")
 
-ggsave(paste0("plots/",Sys.Date(),"_instagram.png"))}
+ggsave(paste0("plots/",Sys.Date(),"_instagram.png"))
+#}

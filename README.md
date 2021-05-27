@@ -127,4 +127,4 @@ Nothing fancy here, just showing how Dogecoin has skyrocketed this year.
 I recently began hosting a local radio show in my hometown of Wolverhampton and I made a quick script to keep track of how many people are tuning in.
 
 
-![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%2014/plots/2021-05-11_views.png)
+![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%2014/plots/2021-05-17_views.png)

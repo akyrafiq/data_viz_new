@@ -77,7 +77,7 @@ I plan to do some NLP work on this building on a framework I learnt two years ag
 
 ## Visualisation 6: India Farmers protests Media Astroturfing
 
-Over the past few months, there have been widespread protests in India in regards to new farming laws being introduced in India. Public figures like Greta Thunberg and Rihanna tweeted out about the issue, which brought about a lot of online backlash. I had a quick look into a few trends to see how this is being carried out by bot activity, often a tell tale sign being the number of digits in the username.
+Over the past few months, there have been widespread protests in India in regards to new farming laws being introduced in India. This has become a very polarising issue with India and the discourse has spread beyond. Public figures like Greta Thunberg and Rihanna tweeted out about the issue, which brought about a lot of online backlash. One bizarre trend started at the beginning of February, where many high profile Indian celebrities all began tweeting the hashtag #IndiaAgainstPropaganda. It all seemed very scripted as most messages read the same and released all within the same day. This hashtag was amplified across Twitter by thousands of accounts. Another trend was #GretaThunbergExposed, with various people trying to say Greta Thunberg was part of a large conspiracy against the Indian Government. I had a quick look into a few trends to see how this is being carried out by bot activity, often a tell tale sign being the number of digits in the username. For people who are unaware, the easiest to use bot generators on Twitter output a username with an 8 digit string at the end. A people have caught on, people who create these automated /sock puppet accounts have become smarter with their naming conventions but it is still a common technique used. 
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%206/bots1.png)
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%206/bots2.png)
@@ -121,3 +121,10 @@ This was a short tutorial I had looking at some macroeconomic data in R
 Nothing fancy here, just showing how Dogecoin has skyrocketed this year.
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%2012/doge.png)
+
+## Visualisation 14: Going Beyond Wolverhampton
+
+I recently began hosting a local radio show in my hometown of Wolverhampton and I made a quick script to keep track of how many people are tuning in.
+
+
+![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%2014/plots/2021-05-11_views.png)

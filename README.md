@@ -132,6 +132,15 @@ Nothing fancy here, just showing how Dogecoin has skyrocketed this year.
 
 ![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%2012/doge.png)
 
+A few months later, I decided to check back in, and whilst the peak wasn't sustained, Dogecoin is still considerably more valuable compared to the beginning of the year.
+
+![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%2012/doge_aug.png)
+
+It might be easier to see the gap with a log scale on the y axis
+
+
+![](https://github.com/akyrafiq/data_viz_new/blob/main/Visualisation%2012/doge_aug_log.png)
+
 ## Visualisation 14
 ### Going Beyond Wolverhampton
 
